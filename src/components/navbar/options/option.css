@@ -1,0 +1,11 @@
+.option{
+    background-color: peachpuff;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 30px 60px;
+}
+.option:hover{
+    color: darkgray;
+    background-color: rgba(255, 218, 185, 0.836);
+    transition: .4s;
+}
