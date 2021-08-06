@@ -4,8 +4,44 @@
     padding: 20px 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     bottom: 0;
-    margin-bottom: 10px;
-    position: fixed;
+    margin: 10px 0px;
     width: 75%;
+    height: 15%;
+}
+.email, .phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover{
+    opacity: .5;
+    transition: .3s;
+}
+.hovers{
+    display: none;
+}
+.zxc{
+    display: inline;
+    position: fixed;
+    bottom: 50%;
+    right: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    background-color: rgb(238, 204, 171);
+    border-radius: 40px;
+    padding: 20px;
+    opacity: 1;
+}
+.opacity{
+    opacity: .5;
 }
