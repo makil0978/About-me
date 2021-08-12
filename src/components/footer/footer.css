@@ -1,5 +1,5 @@
-.footer{
-    background-color:rgb(238, 204, 171) ;
+.footer {
+    background-color: rgb(238, 204, 171);
     border-radius: 70px;
     padding: 20px 10px;
     display: flex;
@@ -10,38 +10,112 @@
     width: 75%;
     height: 15%;
 }
-.email, .phone{
+
+.phone-active,
+.email-active {
+    position: fixed;
+    padding: 40px 60px;
+    background-color: rgb(238, 204, 171);
+    border-radius: 50px;
+    display: flex;
+    bottom: 50%;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon:hover {
+    opacity: .5;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.phone-hover,
+.email-hover {
+    display: none;
+}
+
+.opacity {
+    opacity: .5;
+}
+
+.footer-active {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+.footer-off {
+    display: none;
+}
+
+.footer-lines {
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.quit {
+    position: absolute;
+    border-radius: 20px;
+    height: 1.5rem;
+    width: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    top: 13px;
+    right: 13px;
 }
-.icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.footer-line1 {
+    position: relative;
+    transform: translateY(3px) rotateZ(45deg);
 }
-.icon:hover{
-    opacity: .5;
-    transition: .3s;
+
+.footer-line2 {
+    position: relative;
+    transform: translateY(-2px) rotateZ(135deg);
 }
-.hovers{
-    display: none;
+
+.quit:hover .footer-lines {
+    background-color: darkgray;
+    transition: .4s;
 }
-.zxc{
-    display: inline;
-    position: fixed;
-    bottom: 50%;
-    right: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    background-color: rgb(238, 204, 171);
-    border-radius: 40px;
-    padding: 20px;
-    opacity: 1;
+
+.quit:hover .footer-line1 {
+    animation: footer-rotate1 .5s both;
 }
-.opacity{
-    opacity: .5;
+
+.quit:hover .footer-line2 {
+    animation: footer-rotate2 .5s both;
+}
+
+@keyframes footer-rotate1 {
+    0% {
+        transform: translateY(3px) rotateZ(45deg);
+    }
+
+    100% {
+        transform: translateY(3px) rotateZ(405deg);
+    }
+}
+
+@keyframes footer-rotate2 {
+    0% {
+        transform: translateY(-2px) rotateZ(135deg);
+    }
+
+    100% {
+        transform: translateY(-2px) rotateZ(495deg);
+    }
 }

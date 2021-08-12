@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: rgb(238, 204, 171);
     margin: 0px;
     display: flex;
@@ -6,28 +6,34 @@
     align-items: center;
     position: fixed;
     top: 0;
+    right: 0;
     width: 100%;
-    transition: .4s;
+    transition: .5s;
 }
-.logo{
+
+.logo {
     width: 10%;
 }
-p{
+
+p {
     margin: 0px;
 }
-.navbar-content{
+
+.navbar-content {
     display: flex;
     justify-content: space-around;
     width: 90%;
     align-items: center;
 }
-.lines{
+
+.lines {
     width: 100%;
     height: 20%;
     background-color: black;
-    border-radius: 50px ;
+    border-radius: 50px;
 }
-.hamburger{
+
+.hamburger {
     height: 2rem;
     width: 2.2rem;
     display: flex;
@@ -35,21 +41,26 @@ p{
     justify-content: space-around;
     margin-right: 10px;
 }
-.line2{
+
+.line2 {
     position: relative;
     top: 4px;
 }
-.line3{
+
+.line3 {
     position: relative;
     bottom: 4px;
 }
-.hamburger:hover{
+
+.hamburger:hover {
     cursor: pointer;
 }
-.hamburger:hover .lines{
+
+.hamburger:hover .lines {
     background-color: darkgray;
     transition: .4s;
 }
+
 .navbar-active {
     background-color: rgb(238, 204, 171);
     margin: 0px;
@@ -61,92 +72,110 @@ p{
     right: 0;
     width: 80%;
 }
-.navbar-active>.navbar-content{
+
+.navbar-active>.navbar-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     width: 80%;
 }
-.hamburger-active .line1{
+
+.hamburger-active .line1 {
     animation: ani1 .5s both;
 }
-.hamburger-active .line2{
+
+.hamburger-active .line2 {
     animation: rotate1 .5s .4s both;
 }
-.hamburger-active .line3{
+
+.hamburger-active .line3 {
     animation: rotate2 .5s .4s both;
 }
-.hamburger-active .line4{
+
+.hamburger-active .line4 {
     animation: ani2 .5s both;
 }
 
-@keyframes ani1{
+@keyframes ani1 {
     90% {
         transform: translateY(0.7rem);
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 
 }
-@keyframes ani2{
+
+@keyframes ani2 {
     90% {
         transform: translateY(-0.7rem);
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
-@keyframes rotate1{
+
+@keyframes rotate1 {
     100% {
         transform: rotateZ(495deg);
     }
 
 }
-@keyframes rotate2{
+
+@keyframes rotate2 {
     100% {
         transform: rotateZ(405deg);
     }
 
 }
+
 @media (max-width:687px) {
 
-    .navbar{
+    .navbar {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
-    .logo{
+
+    .logo {
         width: 100%;
     }
-    .navbar-active{
+
+    .navbar-active {
         display: flex;
         flex-direction: column;
         width: 50%;
         transition: 1s;
     }
-    .navbar-content{
+
+    .navbar-content {
         display: none;
         flex-direction: column;
     }
-    .navbar-active>.navbar-content{
+
+    .navbar-active>.navbar-content {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 80%;
     }
-    .hamburger{
+
+    .hamburger {
         position: fixed;
         top: 0;
         right: 0;
         margin: 20px 10px;
     }
 }
+
 @media (min-width:688px) {
-    .hamburger{
+    .hamburger {
         display: none;
     }
-    .navbar-active{
+
+    .navbar-active {
         background-color: rgb(238, 204, 171);
         margin: 0px;
         display: flex;
@@ -158,18 +187,92 @@ p{
         width: 100%;
         transition: .4s;
     }
-    .navbar-content{
+
+    .navbar-content {
         display: flex;
         flex-direction: row;
     }
-    .navbar{
+
+    .navbar {
         display: flex;
         flex-direction: row;
     }
-    .navbar-active>.navbar-content{
+
+    .navbar-active>.navbar-content {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 80%;
     }
+}
+
+.hamburger-off .line2 {
+    animation: rotate-off1 .5s both;
+}
+
+.hamburger-off .line3 {
+    animation: arotate-off2 .5s both;
+}
+
+.hamburger-off .line1 {
+    animation: ani3 0.5s 0.5s both;
+}
+
+.hamburger-off .line4 {
+    animation: ani4 0.5s 0.5s both;
+}
+
+@keyframes rotate-off1 {
+    from {
+        transform: rotateZ(45deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+
+}
+
+@keyframes arotate-off2 {
+    0% {
+        transform: rotateZ(135deg);
+    }
+
+    100% {
+        transform: rotateZ(720deg);
+    }
+
+}
+
+@keyframes ani3 {
+    0% {
+        transform: translateY(0.7rem);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+
+}
+
+@keyframes ani4 {
+    0% {
+        transform: translateY(-0.7rem);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
 }

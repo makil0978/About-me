@@ -1,19 +1,21 @@
-.option{
+.option {
     background-color: peachpuff;
     font-weight: 700;
     border-radius: 20px;
     padding: 30px 60px;
-    font-size:x-large;
+    font-size: x-large;
 
 }
-.option:hover{
+
+.option:hover {
     color: darkgray;
     background-color: rgba(255, 218, 185, 0.836);
     transition: .4s;
     cursor: pointer;
 }
+
 @media (max-width:687px) {
-    .option{
+    .option {
         width: 100%;
         border-radius: 0px;
         display: flex;
