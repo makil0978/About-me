@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import Option from "./options/Options";
+import Navigation from "./Navigation";
 import "./navbar.css";
 import logo from "./logo.png";
 const Navbar = () => {
-  const aboutMe = "About me";
-  const contact = "Contact";
   const [navbar, setNavbar] = useState(false);
 
   const showNavbar = () => setNavbar(!navbar);
-
   return (
     <div
       className={
@@ -18,10 +15,7 @@ const Navbar = () => {
       <a className="logo" href="#home">
         <img src={logo} alt="k"></img>
       </a>
-      <div className="navbar-content navbar-content-active">
-        <Option value={aboutMe} />
-        <Option value={contact} />
-      </div>
+      <Navigation />
       <div className="hamburger" onClick={showNavbar}>
         <div className="line1 lines"></div>
         <div className="line2 lines"></div>
