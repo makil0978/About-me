@@ -1,4 +1,4 @@
-name: About-me
+name: about-me
 
 on:
   push:
