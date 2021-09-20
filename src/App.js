@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <Main />
       <Footer />
-     #asd
     </div>
   );
 }
